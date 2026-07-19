@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attention Weights Visualizer</title>
+<link rel="stylesheet" href="looks.css">
+</head>
+<body>
+
+<h1>Self-Attention, Visually</h1>
+<p class="sub">This is a simplified version of the mechanism inside every Transformer (GPT, Claude, etc). Each word "looks at" every other word and decides how much to pay attention to it. Type a sentence and tap a word to see its attention row.</p>
+
+<div class="card">
+  <div class="row">
+    <input type="text" id="sentence" value="the cat sat on the mat" spellcheck="false">
+    <button id="goBtn">Build</button>
+  </div>
+
+  <div id="wordBank" class="word-bank"></div>
+
+  <canvas id="heat" width="480" height="480"></canvas>
+
+  <p class="hint" id="hint">Tap a word above to highlight its attention row.</p>
+</div>
+
+<script src="brain.js"></script>
+</body>
+</html>
